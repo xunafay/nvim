@@ -17,7 +17,7 @@ dashboard.section.header.val = {
 [[   ███                                  ██                 ██                         ████ ]],
 [[                                                                                           ]],
 [[                                                                                           ]],
-[[                                                                                           ]], 
+[[                                                                                           ]],
 }
 
 -- Set menu

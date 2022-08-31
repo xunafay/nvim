@@ -34,9 +34,6 @@ packer.init {
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    -- Copilot
-    use 'github/copilot.vim'
-
     -- Themes
     use 'gruvbox-community/gruvbox'
 
