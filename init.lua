@@ -80,7 +80,15 @@ require('lazy').setup({
   {
     'zbirenbaum/copilot.lua',
     config = function()
-      require('copilot').setup({})
+      require('copilot').setup({
+        panel = {
+          auto_refresh = true,
+        },
+        suggestions = {
+          auto_trigger = true,
+        },
+
+      })
     end,
   },
 
@@ -212,6 +220,7 @@ require('lazy').setup({
       },
     },
   },
+  'nvim-telescope/telescope-media-files.nvim',
 
   {
     -- Highlight, edit, and navigate code
@@ -293,6 +302,8 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+vim.o.scrolloff = 99
 
 -- Color scheme
 vim.cmd 'colorscheme ghdark'
@@ -507,7 +518,7 @@ require('telescope').setup {
   extensions = {
     ["ui-select"] = {
       require("telescope.themes").get_dropdown {}
-    }
+    },
   }
 }
 
@@ -516,6 +527,7 @@ require("telescope").load_extension("ui-select")
 pcall(require('telescope').load_extension, 'fzf')
 -- add flutter tools to telescope
 require('telescope').load_extension('flutter')
+require('telescope').load_extension('media_files')
 -- code actions
 -- require('telescope').load_extension('telescope-code-actions')
 --
